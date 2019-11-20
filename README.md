@@ -1,4 +1,5 @@
 # Meal Sharing: Banquet
+(See Project Design Document.docx for full plan with pictures)
 
 
 Purpose: Similar to the way that ride-sharing allows people to obtain transit cheaper and more convenient than with a traditional taxi service, meal-sharing is intended to enable people to arrange group meals that will be cheap and convenient for customers while providing a reasonable income to the food preppers who put in a similar amount of effort to what it would have taken to feed themselves.
