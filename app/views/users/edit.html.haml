@@ -1,0 +1,19 @@
+-# in app/views/users/edit.html.haml
+
+%h2 Details about #{@user.first_name} #{@user.middle_name} #{@user.last_name} 
+
+= form_tag('/updateUser', method: :put) do
+
+  = label :user, :first_name, 'First Name'
+  = text_field :user, 'first_name'
+
+  = label :user, :middle_name, 'Middle Name'
+  = text_field :user, 'middle_name'
+
+  = label :user, :last_name, 'Last Name'
+  = text_field :user, 'last_name'
+
+  = label :user, :zip_code, 'Zip Code'
+  = number_field :user, 'zip_code'
+
+  = submit_tag 'Update Profile Info'

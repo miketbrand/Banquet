@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %title Banquet
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  %body
+  
+    %h1.title Banquet
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+    %table#panels{:style => "width:100%"}
+      %thead
+        %tr
+          %th 
+            %table#panels
+              %tbody
+                %tr 
+                  %td= link_to "Profile", profile_path
+                %tr 
+                  %td= link_to "My Banquets", mybanquets_path
+                %tr 
+                  %td= link_to "New Banquet", newbanquet_path
+                %tr 
+                  %td= link_to "Find Banquets", findbanquets_path
+                %tr 
+                  %td= link_to "Transaction History", transactions_path
+                %tr 
+                  %td= link_to "Logout", login_path
+          %th
+            #main
+              = yield

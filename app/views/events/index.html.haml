@@ -1,0 +1,21 @@
+-#  This file is app/views/events/index.html.haml
+%h1 All Events
+
+%table#events
+  %thead
+    %tr
+      %th Aggregate ID
+      %th Aggregate Type
+      %th Aggregate Status
+      %th Event ID
+      %th Event Type
+      %th Event Data
+  %tbody
+    - @events.each do |full_event|
+      %tr
+        %td= full_event.aggregate_id
+        %td= full_event.aggType
+        %td= full_event.aggStatus
+        %td= full_event.id
+        %td= full_event.eventType
+        %td= full_event.eventData

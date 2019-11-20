@@ -1,0 +1,30 @@
+-#  This file is app/views/events/show.html.haml
+%h1 Debits
+
+%table#transactions
+  %thead
+    %tr
+      %th Recipient Email
+      %th Banquet Name
+      %th Amount
+  %tbody
+    - @debits.each do |debit|
+      %tr
+        %td= debit.recipient_email
+        %td= debit.banquet_name
+        %td= debit.amount
+
+%h1 Credits
+
+%table#transactions
+  %thead
+    %tr
+      %th Customer Username
+      %th Banquet Name
+      %th Amount
+  %tbody
+    - @credits.each do |credit|
+      %tr
+        %td= credit.customer_email
+        %td= credit.banquet_name
+        %td= credit.amount

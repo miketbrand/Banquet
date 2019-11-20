@@ -1,0 +1,19 @@
+-#  This file is app/views/events/find.html.haml
+%h1 Find Banquets
+
+%table#banquets
+  %thead
+    %tr
+      %th Banquet Name
+      %th Start
+      %th End
+      %th Entry Price
+      %th RSVP
+  %tbody
+    - @banquets.each do |banquet|
+      %tr
+        %td= banquet.banquet_name
+        %td= banquet.start
+        %td= banquet.end
+        %td= banquet.entryPrice
+        %td= link_to "RSVP to #{banquet.banquet_name}", rsvp_path(banquet)

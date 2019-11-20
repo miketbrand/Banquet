@@ -1,0 +1,24 @@
+-#  This file is app/views/events/new.html.haml
+%h1 New Banquet
+
+= form_tag('/createbanquet', method: :put) do
+
+  = label :banquet, :name, 'Banquet Name'
+  = text_field :banquet, 'name'
+  
+  = label :banquet, :zip_code, 'Zip Code'
+  = text_field :banquet, 'zip_code'
+  
+  = label :banquet, :start, 'Starting Date/Time'
+  = text_field :banquet, 'start'
+  
+  = label :banquet, :end, 'Ending Date/Time'
+  = text_field :banquet, 'end'
+  
+  = label :banquet, :entryPrice, 'Entry Price'
+  = text_field :banquet, 'entryPrice'
+  
+  = label :banquet, :entryLimit, 'Entry Limit'
+  = text_field :banquet, 'entryLimit'
+
+  = submit_tag 'Submit'

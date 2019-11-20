@@ -1,0 +1,21 @@
+-#  This file is app/views/events/show.html.haml
+%h1 My Banquets
+
+%table#banquets
+  %thead
+    %tr
+      %th Banquet Name
+      %th Zip Code
+      %th Start
+      %th End
+      %th Entry Price
+      %th Entry Limit
+  %tbody
+    - @banquets.each do |banquet|
+      %tr
+        %td= banquet.banquet_name
+        %td= banquet.zip_code
+        %td= banquet.start
+        %td= banquet.end
+        %td= banquet.entryPrice
+        %td= banquet.entryLimit

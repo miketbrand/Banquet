@@ -1,0 +1,26 @@
+-# in app/views/users/login.html.haml
+
+%h2 Login
+
+= form_tag('/verify', method: :put) do
+
+  = label :user, :login_email, 'Email'
+  = text_field :user, 'login_email'
+
+  = label :user, :login_password, 'Password'
+  = text_field :user, 'login_password'
+
+  = submit_tag 'Login'
+
+
+%h2 Sign Up
+
+= form_tag('/signup', method: :put) do
+
+  = label :user, :signup_email, 'Email'
+  = text_field :user, 'signup_email'
+
+  = label :user, :signup_password, 'Password'
+  = text_field :user, 'signup_password'
+
+  = submit_tag 'Sign Up'
